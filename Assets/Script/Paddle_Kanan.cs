@@ -39,7 +39,7 @@ public class Paddle_Kanan : MonoBehaviour
 	private void MoveObject(Vector2 movement)
 	{
 		//transform.Translate(movement * Time.deltaTime);
-		Debug.Log("TEST: " + movement); 
+		//Debug.Log("TEST: " + movement); 
 		rig.velocity = movement;
 	}
 }

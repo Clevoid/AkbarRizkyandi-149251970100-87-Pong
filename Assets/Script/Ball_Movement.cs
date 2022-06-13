@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball_Movement : MonoBehaviour
 {
 	public Vector2 speed;
+	private Vector2 speedOld;
 	private Rigidbody2D rig;
 	public Vector2 resetPosition;
 	
@@ -13,6 +14,7 @@ public class Ball_Movement : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
 		rig.velocity = speed;
+		speedOld = speed;
     }
 
     // Update is called once per frame
@@ -25,5 +27,10 @@ public class Ball_Movement : MonoBehaviour
 	public void ResetBall() 
     { 
         transform.position = new Vector2(resetPosition.x, resetPosition.y); 
+		rig.velocity = speedOld;
     } 
+	
+	public void ActivatePUSpeedUP(float magnitude){
+		rig.velocity *= magnitude;
+	}
 }
