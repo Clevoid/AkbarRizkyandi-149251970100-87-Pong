@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
 	public int leftScore;
 	public int maxScore;
 	public Ball_Movement ball;
+	public Paddle_Kanan padKanan;
+	public Paddle_Kiri padKiri;
 	
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,8 @@ public class ScoreManager : MonoBehaviour
 			GameOver();
 		}
 		ball.ResetBall();
+		padKanan.resetPaddle();
+		padKiri.resetPaddle();
 	}
 	
 	public void addLeftScore(int tambah){
@@ -37,6 +41,8 @@ public class ScoreManager : MonoBehaviour
 			GameOver();
 		}
 		ball.ResetBall();
+		padKanan.resetPaddle();
+		padKiri.resetPaddle();
 	}
 	
 	public void GameOver(){

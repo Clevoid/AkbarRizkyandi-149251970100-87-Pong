@@ -24,5 +24,9 @@ public class MainMenu_Schene : MonoBehaviour
 	public void OpenAuthor() 
     { 
         Debug.Log("Created By AkbarRizkyandi - 149251970100-87"); 
-    } 
+    }
+	
+	public void OpenCredit(){
+		SceneManager.LoadScene("Credit");
+	}
 }

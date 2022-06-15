@@ -27,9 +27,6 @@ public class PowerUPManager : MonoBehaviour{
 		//Debug.Log("waktu : " + timer);
 		if(timer > spawnInterval){
 			GenerateRandomPowerUP();
-			if(powerUPList.Count > 2){
-				RemovePowerUP(powerUPList[0]);
-			}
 			timer -= spawnInterval;
 		}
 	}
@@ -42,6 +39,7 @@ public class PowerUPManager : MonoBehaviour{
 	
 	public void GenerateRandomPowerUP(Vector2 position){
 		if(powerUPList.Count >= maxPowerUPAmount){
+			RemovePowerUP(powerUPList[0]);
 			return;
 		}
 		

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paddle_Kanan : MonoBehaviour
+public class Paddle_Kiri : MonoBehaviour
 {
 	public int Kecepatan;
 	public KeyCode upKey;
@@ -52,14 +52,14 @@ public class Paddle_Kanan : MonoBehaviour
 		transform.localScale = new Vector2(transform.localScale.x, (transform.localScale.y * panjangY));
 	}
 	
-	public void ActivateSpeedPaddleUP(int speed){		
+	public void ActivateSpeedPaddleUP(int speed){
 		KecepatanBaru *= speed;
 	}
 	
 	public void resetPaddle(){
 		transform.localScale = new Vector2(scaleAwal.x, scaleAwal.y);
-		LengthManager.isRight = true;
-		PaddleSpeedManager.isRight = true;
+		LengthManager.isRight = false;
+		PaddleSpeedManager.isRight = false;
 		KecepatanBaru = Kecepatan;
 	}
 }
